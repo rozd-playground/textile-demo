@@ -12,6 +12,7 @@
 		506D364123660E14006F514F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506D363F23660E14006F514F /* Main.storyboard */; };
 		506D364323660E17006F514F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506D364223660E17006F514F /* Assets.xcassets */; };
 		506D364623660E17006F514F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506D364423660E17006F514F /* LaunchScreen.storyboard */; };
+		506D364F23661CF6006F514F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D364E23661CF6006F514F /* ViewModel.swift */; };
 		B670B5CEE6203031EF91C208 /* Pods_TextileDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED365D811A75ADF584993DC /* Pods_TextileDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		506D364223660E17006F514F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		506D364523660E17006F514F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		506D364723660E17006F514F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		506D364E23661CF6006F514F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		93E9CAC041E772B8EF926CB9 /* Pods-TextileDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextileDemo.debug.xcconfig"; path = "Target Support Files/Pods-TextileDemo/Pods-TextileDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B698A21CD70999DAAEAFCD02 /* Pods-TextileDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextileDemo.release.xcconfig"; path = "Target Support Files/Pods-TextileDemo/Pods-TextileDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 		506D363823660E14006F514F /* TextileDemo */ = {
 			isa = PBXGroup;
 			children = (
+				506D364D23661CEA006F514F /* ViewModel */,
 				506D363923660E14006F514F /* AppDelegate.swift */,
 				506D363D23660E14006F514F /* ViewController.swift */,
 				506D363F23660E14006F514F /* Main.storyboard */,
@@ -78,6 +81,14 @@
 				506D364723660E17006F514F /* Info.plist */,
 			);
 			path = TextileDemo;
+			sourceTree = "<group>";
+		};
+		506D364D23661CEA006F514F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				506D364E23661CF6006F514F /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6A29ACBDF6D7B076C5D0D8AC /* Frameworks */ = {
@@ -204,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506D363E23660E14006F514F /* ViewController.swift in Sources */,
+				506D364F23661CF6006F514F /* ViewModel.swift in Sources */,
 				506D363A23660E14006F514F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
