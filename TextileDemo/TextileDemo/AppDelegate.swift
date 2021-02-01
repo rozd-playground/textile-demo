@@ -50,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
 
     fileprivate func initTextile() {
+        print(Textile.instance())
+        
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
         let repoPath = (documentPath as NSString).appendingPathComponent("textile-repo")
 
@@ -64,7 +66,27 @@ extension AppDelegate {
             print(e.localizedDescription)
         }
 
+        var error: NSError?
+
+        print("seed > \(Textile.instance().account.seed())")
+        print("account > \(Textile.instance().account.contact(&error))")
+
         Textile.instance().delegate = self
+
+        print(Textile.instance())
+    }
+
+    fileprivate func connectToCafe() {
+        Textile.instance().cafes.register("https://8bc36ced.ngrok.io", token: "2GHPKw5TBbZYFHUkpUbKWMDYGpaBntYacj9JcCg5yXGcNTZ7sGBEZvkgCk9kz") { error in
+//            print(error)
+        }
+        var error: NSError?
+        let sessions = Textile.instance().cafes.sessions(&error)
+        if let error = error {
+            print("ERROR \(error.localizedDescription)")
+        } else {
+            print("sessions: \(sessions)")
+        }
     }
 
 }
@@ -78,4 +100,8 @@ extension AppDelegate: TextileDelegate {
         print("threadUpdateReceived \(threadId)")
     }
 
+    func nodeOnline() {
+        print("nodeOnline")
+        connectToCafe()
+    }
 }

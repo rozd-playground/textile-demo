@@ -72,6 +72,7 @@
 		506D363823660E14006F514F /* TextileDemo */ = {
 			isa = PBXGroup;
 			children = (
+				506D36702367248E006F514F /* Support */,
 				506D364D23661CEA006F514F /* ViewModel */,
 				506D363923660E14006F514F /* AppDelegate.swift */,
 				506D363D23660E14006F514F /* ViewController.swift */,
@@ -89,6 +90,21 @@
 				506D364E23661CF6006F514F /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		506D36702367248E006F514F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				506D367123672495006F514F /* Textile API Wrapper */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		506D367123672495006F514F /* Textile API Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Textile API Wrapper";
 			sourceTree = "<group>";
 		};
 		6A29ACBDF6D7B076C5D0D8AC /* Frameworks */ = {

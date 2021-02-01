@@ -50,10 +50,10 @@ class ViewModel {
         let schema = AddThreadConfig_Schema()
         schema.preset = .blob
         let config = AddThreadConfig()
-        config.key = "com.github.rozd.playground.textile.demo.thread.Test"
-        config.name = "Test"
-        config.type = .private
-        config.sharing = .notShared
+        config.key = "com.github.rozd.playground.textile.demo.thread.Test1"
+        config.name = "Test1"
+        config.type = .open
+        config.sharing = .shared
         config.schema = schema
         let thread = Textile.instance().threads.add(config, error: &error)
         if let error = error {
@@ -66,10 +66,13 @@ class ViewModel {
     func retrieveTestThreadIfCreated() -> Any? {
         var error: NSError?
         let threads = Textile.instance().threads.list(&error)
-        guard let thread = threads.itemsArray.firstObject else {
+        guard let thread = threads.itemsArray.firstObject as? NSObject else {
             if let error = error {
                 print(error.localizedDescription)
             }
+            return nil
+        }
+        guard let key = thread.value(forKey: "key") as? String, key == "com.github.rozd.playground.textile.demo.thread.Test1" else {
             return nil
         }
         print("found thread \(thread)")
